@@ -10,7 +10,7 @@ btn.addEventListener('click', function(){
 
   function wordCheck(wordWritten){
    let wordReversed = "";
-    for (let i = wordWritten.length - 1; i >= 0; i--) { 
+    for (let i = wordWritten.length; i >= 0; i--) { 
      wordReversed += wordWritten[i];
    }
   
@@ -18,8 +18,8 @@ btn.addEventListener('click', function(){
   }
 
   if( word == wordCheck(word)){
-    document.querySelector("#result").innerHTML = `La parola ${word} che hai inserito è palindroma.`
+    document.querySelector("#result").innerHTML = `La parola ${word} è palindroma.`
   }else{
-     document.querySelector("#result").innerHTML = `La parola ${word} che hai inserito non è una palindroma.`
+     document.querySelector("#result").innerHTML = `La parola ${word} non è una palindroma.`
   } 
 })
